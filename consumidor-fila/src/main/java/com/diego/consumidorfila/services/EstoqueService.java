@@ -5,6 +5,8 @@ import com.diego.consumidorfila.repositorys.EstoqueRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class EstoqueService {
 
@@ -14,5 +16,10 @@ public class EstoqueService {
     public void atualizaEstoque (Estoque estoque){
         estoqueRepository.save(estoque);
     }
+
+    public Optional<Estoque> buscaEstoque(long codigo){
+        return estoqueRepository.findById(codigo);
+    }
+
 
 }
