@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 public class EstoqueDTO implements Serializable {
 
-    public String codigoProduto;
-    public String quantidade;
+    public long codigoProduto;
+    public int quantidade;
 
 }

@@ -22,9 +22,9 @@ public class EstoqueConsumer implements Serializable {
     private void consumidor(EstoqueDTO estoqueDTO){
         log.info("Resgatando mensagem do RabbitMQ: "+estoqueDTO.toString());
         Estoque estoque = new Estoque();
-        estoque.setCodigoProduto(Integer.parseInt(estoqueDTO.codigoProduto));
+        estoque.setCodigoProduto(estoqueDTO.codigoProduto);
         estoque.setQuantidade(estoqueDTO.quantidade);
-        //estoqueService.atualizaEstoque(estoque);
+        estoqueService.atualizaEstoque(estoque);
     }
 
 }

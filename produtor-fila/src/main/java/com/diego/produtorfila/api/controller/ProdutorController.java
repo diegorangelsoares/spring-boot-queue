@@ -19,12 +19,6 @@ public class ProdutorController {
     @Autowired
     RabbitMqService rabbitMqService;
 
-    @RequestMapping(value = "/estoque", method = RequestMethod.GET)
-    public ResponseEntity<?> getEstoque (){
-
-        return new ResponseEntity<>("Aloww", HttpStatus.OK);
-    }
-
     @RequestMapping(value = "/estoque", method = RequestMethod.PUT)
     public ResponseEntity<?> alteraEstoque (@RequestBody EstoqueDTO estoqueDTO){
         log.info("Enviando mensagem estoque: "+estoqueDTO.toString());

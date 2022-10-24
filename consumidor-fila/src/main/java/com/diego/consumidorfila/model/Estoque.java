@@ -15,7 +15,7 @@ public class Estoque implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long codigoProduto;
 
-    private String quantidade;
+    private int quantidade;
 
 
 }
