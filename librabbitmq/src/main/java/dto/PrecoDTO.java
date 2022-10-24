@@ -1,10 +1,7 @@
-package com.diego.produtorfila.dto;
-
-import lombok.Data;
+package dto;
 
 import java.io.Serializable;
 
-@Data
 public class PrecoDTO implements Serializable {
 
     public String codigoProduto;

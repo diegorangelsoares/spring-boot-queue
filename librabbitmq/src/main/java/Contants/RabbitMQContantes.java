@@ -1,4 +1,4 @@
-package com.diego.produtorfila.Contants;
+package Contants;
 
 public class RabbitMQContantes {
 

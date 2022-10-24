@@ -1,9 +1,9 @@
 package com.diego.produtorfila.api.controller;
 
-import com.diego.produtorfila.Contants.RabbitMQContantes;
-import com.diego.produtorfila.dto.EstoqueDTO;
-import com.diego.produtorfila.dto.PrecoDTO;
+import Contants.RabbitMQContantes;
 import com.diego.produtorfila.service.RabbitMqService;
+import dto.EstoqueDTO;
+import dto.PrecoDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

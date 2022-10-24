@@ -1,6 +1,6 @@
 package com.diego.produtorfila.connections;
 
-import com.diego.produtorfila.Contants.RabbitMQContantes;
+import Contants.RabbitMQContantes;
 import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.DirectExchange;
