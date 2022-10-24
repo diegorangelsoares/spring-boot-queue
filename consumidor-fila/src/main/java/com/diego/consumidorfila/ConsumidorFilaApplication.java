@@ -2,8 +2,10 @@ package com.diego.consumidorfila;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
+@EntityScan (basePackages = "com.diego.consumidorfila.model")
 @SpringBootApplication
 @EnableWebMvc
 public class ConsumidorFilaApplication {
