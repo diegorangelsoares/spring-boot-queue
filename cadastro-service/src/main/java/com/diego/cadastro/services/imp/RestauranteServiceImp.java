@@ -41,4 +41,18 @@ public class RestauranteServiceImp implements RestauranteService {
     public List<Restaurante> buscaTodosRestaurantes() {
         return restauranteRepository.findAll();
     }
+
+    @Autowired
+    public List<Restaurante> buscaMediaTodosRestaurantes(List<Restaurante> restaurantes){
+        if (restaurantes != null && !restaurantes.isEmpty()){
+            //buscar no reputacao-service
+            restaurantes.forEach(
+                    restaurante -> {
+                        //feign para o servico para alterar a media exibida
+                        restaurante.setNotaMedia(0.5);
+                    }
+            );
+        }
+        return restaurantes;
+    };
 }

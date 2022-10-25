@@ -17,4 +17,6 @@ public interface RestauranteService {
 
     public List<Restaurante> buscaTodosRestaurantes();
 
+    public List<Restaurante> buscaMediaTodosRestaurantes(List<Restaurante> restaurantes);
+
 }

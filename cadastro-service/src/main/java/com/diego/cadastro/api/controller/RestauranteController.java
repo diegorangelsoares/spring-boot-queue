@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.awt.print.Pageable;
+import java.util.List;
 
 @RestController
 @RequestMapping("/v1/restaurante")
@@ -40,6 +41,8 @@ public class RestauranteController {
 
     @RequestMapping (value = "/", method = RequestMethod.GET)
     public ResponseEntity<?> getAll (){
+        List<Restaurante> restaurantes =restauranteService.buscaTodosRestaurantes();
+        restauranteService.buscaMediaTodosRestaurantes(restaurantes);
         return new ResponseEntity<>(restauranteService.buscaTodosRestaurantes(), HttpStatus.OK);
     }
 
