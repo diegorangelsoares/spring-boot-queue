@@ -18,18 +18,23 @@ public class ProdutoServiceImp implements ProdutoService {
     @Autowired
     private ProdutoRepository produtoRepository;
 
-    @CacheEvict("estoque")
+    //@CacheEvict("estoque")
     public void atualizaEstoque (Produto produto){
         produtoRepository.save(produto);
     }
 
+    public Produto salva (Produto produto){
+        return produtoRepository.save(produto);
+    }
+
 //    @CacheEvict("estoque")
     public void atualizaEstoque (EstoqueDTO estoqueDTO){
-        Produto produto = new Produto();
-        produto.setCodigoProduto(estoqueDTO.codigoProduto);
-        produto.setQuantidade(estoqueDTO.quantidade);
-        produto.setDataAtualizacao(LocalDateTime.now());
-        produtoRepository.save(produto);
+        Optional<Produto> produto = buscaProduto(estoqueDTO.codigoProduto);
+        if (produto.isPresent()){
+            produto.get().setQuantidade(estoqueDTO.quantidade);
+            produto.get().setDataAtualizacao(LocalDateTime.now());
+            produtoRepository.save(produto.get());
+        }
     }
 
 //    @CacheEvict("estoque")
@@ -40,17 +45,6 @@ public class ProdutoServiceImp implements ProdutoService {
             produto.get().setDataAtualizacao(LocalDateTime.now());
             produtoRepository.save(produto.get());
         }
-//
-//
-//        Produto produtoAlteracao = new Produto();
-//        if (!produto.isPresent()){
-//            produtoAlteracao = new Produto();
-//        }else{
-//            produtoAlteracao = produto.get();
-//        }
-//        produtoAlteracao.setCodigoProduto(precoDTO.codigoProduto);
-//        produtoAlteracao.setDataAtualizacao(LocalDateTime.now());
-//        produtoRepository.save(produtoAlteracao);
     }
 
 //    @Cacheable("estoque")

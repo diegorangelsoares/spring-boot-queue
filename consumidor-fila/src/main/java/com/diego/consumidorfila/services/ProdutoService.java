@@ -13,5 +13,7 @@ public interface ProdutoService {
 
     public Optional<Produto> buscaProduto(long codigo);
 
+    public Produto salva (Produto produto);
+
 
 }
