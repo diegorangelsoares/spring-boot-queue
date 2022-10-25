@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/cadastro-service/cadastro-service.iml" filepath="$PROJECT_DIR$/cadastro-service/cadastro-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consumidor-fila/consumidor-fila.iml" filepath="$PROJECT_DIR$/consumidor-fila/consumidor-fila.iml" />
+      <module fileurl="file://$PROJECT_DIR$/librabbitmq/librabbitmq.iml" filepath="$PROJECT_DIR$/librabbitmq/librabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/produtor-fila/produtor-fila.iml" filepath="$PROJECT_DIR$/produtor-fila/produtor-fila.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reputacao-service/reputacao-service.iml" filepath="$PROJECT_DIR$/reputacao-service/reputacao-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring-boot-queue.iml" filepath="$PROJECT_DIR$/.idea/spring-boot-queue.iml" />
     </modules>
   </component>
