@@ -10,3 +10,9 @@ Projeto que simula as rotinas de um restaurante (Pedidos) por aplicativo/web dis
 -   Pedidos
 
 - Controle de Reputação do Restaurante
+
+Tecnologias utilizadas:
+  Spring boot
+  Redis
+  Postgres
+  RabbitMQ
