@@ -4,10 +4,11 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @Data
-@Entity(name = "estoque")
-public class Estoque implements Serializable {
+@Entity(name = "produto")
+public class Produto implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -16,6 +17,10 @@ public class Estoque implements Serializable {
     private long codigoProduto;
 
     private int quantidade;
+
+    private Double preco;
+
+    private LocalDateTime dataAtualizacao;
 
 
 }

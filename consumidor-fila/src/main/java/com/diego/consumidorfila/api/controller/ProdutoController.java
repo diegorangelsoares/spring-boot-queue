@@ -1,7 +1,7 @@
 package com.diego.consumidorfila.api.controller;
 
-import com.diego.consumidorfila.model.Estoque;
-import com.diego.consumidorfila.services.EstoqueService;
+import com.diego.consumidorfila.model.Produto;
+import com.diego.consumidorfila.services.imp.ProdutoServiceImp;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,14 +16,14 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/v1")
 @Slf4j
-public class EstoqueController {
+public class ProdutoController {
 
     @Autowired
-    EstoqueService estoqueService;
+    ProdutoServiceImp estoqueService;
 
-    @RequestMapping(value = "/estoque/{idProduto}", method = RequestMethod.GET)
-    public ResponseEntity<?> getEstoque (@PathVariable long idProduto){
-        Optional<Estoque> estoque = estoqueService.buscaEstoque(idProduto);
+    @RequestMapping(value = "/produto/{idProduto}", method = RequestMethod.GET)
+    public ResponseEntity<?> getProduto (@PathVariable long idProduto){
+        Optional<Produto> estoque = estoqueService.buscaProduto(idProduto);
         if (!estoque.isPresent()){
             return new ResponseEntity<>("Produto não encontrado!", HttpStatus.NOT_FOUND);
         }
