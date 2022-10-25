@@ -21,14 +21,14 @@ public class ProdutorController {
 
     @RequestMapping(value = "/estoque", method = RequestMethod.PUT)
     public ResponseEntity<?> alteraEstoque (@RequestBody EstoqueDTO estoqueDTO){
-        log.info("Enviando mensagem estoque: "+estoqueDTO.toString());
+        log.info("Enviando alteracao de estoque: "+estoqueDTO.toString());
         this.rabbitMqService.enviaMensagem(RabbitMQContantes.FILA_ESTOQUE, estoqueDTO);
         return new ResponseEntity<>("Alteração de estoque enviada...", HttpStatus.OK);
     }
 
     @RequestMapping(value = "/preco", method = RequestMethod.PUT)
     public ResponseEntity<?> alteraPreco (@RequestBody PrecoDTO precoDTO){
-        log.info("Enviando mensagem preco: "+precoDTO.toString());
+        log.info("Enviando alteracao de preco: "+precoDTO.toString());
         this.rabbitMqService.enviaMensagem(RabbitMQContantes.FILA_PRECO, precoDTO);
         return new ResponseEntity<>("Alteração de preço enviada...", HttpStatus.OK);
     }
