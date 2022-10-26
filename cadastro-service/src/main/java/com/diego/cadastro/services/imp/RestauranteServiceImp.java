@@ -6,8 +6,6 @@ import com.diego.cadastro.services.RestauranteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.awt.print.Pageable;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -42,7 +40,7 @@ public class RestauranteServiceImp implements RestauranteService {
         return restauranteRepository.findAll();
     }
 
-    @Autowired
+    @Override
     public List<Restaurante> buscaMediaTodosRestaurantes(List<Restaurante> restaurantes){
         if (restaurantes != null && !restaurantes.isEmpty()){
             //buscar no reputacao-service

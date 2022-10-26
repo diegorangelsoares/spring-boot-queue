@@ -1,0 +1,24 @@
+package com.diego.cadastro.security;
+
+//import br.com.diego.data.DetalheUsuarioData;
+//import br.com.diego.model.Usuario;
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+public class JWTAutenticarFilter extends UsernamePasswordAuthenticationFilter {
+
+    private final AuthenticationManager authenticationManager;
+    public static final String TOKEN_SENHA = "35de8308-282c-11ec-9621-0242ac130002";
+
+    private static final int TOKEN_EXPIRACAO = 600000;
+
+    public JWTAutenticarFilter(AuthenticationManager authenticationManager) {
+        this.authenticationManager = authenticationManager;
+    }
+
+}
