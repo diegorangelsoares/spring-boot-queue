@@ -19,16 +19,11 @@ public class JWTConfiguracao extends WebSecurityConfigurerAdapter {
             "/tokens/**",
             "/login/**",
             "/webjars/**",
-            "/v2/api-docs/**",
+            "/v1/api-docs/**",
             "/swagger-resources/**",
             "/swagger-ui.html",
-            "/usuarios/senha",
-            "/usuarios/recuperacao-senha/email",
-            "/usuarios/recuperacao-senha/login",
-            "/usuarios/recuperacao-login/email",
-            "/usuarios/validacao/token",
-            "/usuarios/credenciais",
-            "/actuator/**"
+            "/actuator/**",
+            "/**"
     };
 
     public JWTConfiguracao(PasswordEncoder passwordEncoder) {
@@ -38,7 +33,6 @@ public class JWTConfiguracao extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().authorizeHttpRequests()
-                //.antMatchers(HttpMethod.POST, "/login").permitAll()
                 .antMatchers(ENDPOINTS_LIBERADOS).permitAll()
                 .anyRequest().authenticated()
                 .and()
