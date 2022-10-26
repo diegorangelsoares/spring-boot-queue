@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/autentication-service/autentication.iml" filepath="$PROJECT_DIR$/autentication-service/autentication.iml" />
       <module fileurl="file://$PROJECT_DIR$/cadastro-service/cadastro-service.iml" filepath="$PROJECT_DIR$/cadastro-service/cadastro-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/consumidor-fila/consumidor-fila.iml" filepath="$PROJECT_DIR$/consumidor-fila/consumidor-fila.iml" />
       <module fileurl="file://$PROJECT_DIR$/librabbitmq/librabbitmq.iml" filepath="$PROJECT_DIR$/librabbitmq/librabbitmq.iml" />
