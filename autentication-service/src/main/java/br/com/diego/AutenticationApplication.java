@@ -13,7 +13,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-//@SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 @SpringBootApplication()
 public class AutenticationApplication {
 
