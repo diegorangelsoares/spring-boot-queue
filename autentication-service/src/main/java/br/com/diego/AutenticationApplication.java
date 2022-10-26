@@ -1,25 +1,42 @@
 package br.com.diego;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.env.Environment;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 //@SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 @SpringBootApplication()
 public class AutenticationApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(AutenticationApplication.class, args);
-		System.out.println("Link do Swagger: http://localhost:8200/webjars/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/");
-		System.out.println("Url para autenticar via Postman: http://localhost:8200/login");
-		System.out.println("Json:\n" +
-				"{\n" +
-				"    \"login\":\"user\",\n" +
-				"    \"password\": \"password\"\n" +
-				"}");
+	public static void main(String[] args) throws UnknownHostException {
+		Logger logger = LoggerFactory.getLogger(AutenticationApplication.class);
+		SpringApplication app = new SpringApplication(AutenticationApplication.class);
+		Environment env = app.run(args).getEnvironment();
+		logger.info("\n----------------------------------------------------------\n\t" +
+						"Autentication Service está rodando! Acesse uma das URLs:\n\t" +
+						"Para obter um token para consumir as APIs: " +
+//						"Curl\thttp://localhost:{}//login\n\t" +
+						"\n\n\tcurl --location --request POST 'localhost:{}/login' \\\n" +
+								"\t--header 'Content-Type: application/json' \\\n" +
+								"\t--data-raw '{\n" +
+								"\t    \"login\":\"nomeUsuario\",\n" +
+								"\t    \"password\": \"senhaUsuario\"\n" +
+								"\t}'\n\n"+
+
+						env.getProperty("server.port"),
+				env.getProperty("server.port"),
+				InetAddress.getLocalHost().getHostAddress(),
+				env.getProperty("server.port"));
+
 	}
 
 	@Bean
