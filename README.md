@@ -14,6 +14,8 @@ Projeto que simula as rotinas de um restaurante (Pedidos) por aplicativo/web dis
 
 Tecnologias utilizadas:
   Spring boot
+  Spring Security
   Redis
   Postgres
   RabbitMQ
+  
