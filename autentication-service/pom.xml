@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.diego</groupId>
-	<artifactId>autentication</artifactId>
+	<artifactId>autentication-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>autentication</name>
+	<name>autentication-service</name>
 	<description>Project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>

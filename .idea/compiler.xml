@@ -6,20 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="consumidor-fila" />
-        <module name="produtor-fila" />
         <module name="reputacao-service" />
         <module name="librabbitmq" />
         <module name="cadastro-service" />
         <module name="autentication" />
+        <module name="consumidor-fila-service" />
+        <module name="produtor-fila-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="autentication" target="11" />
       <module name="cadastro-service" target="17" />
-      <module name="consumidor-fila" target="17" />
+      <module name="consumidor-fila-service" target="17" />
       <module name="librabbitmq" target="17" />
-      <module name="produtor-fila" target="17" />
+      <module name="produtor-fila-service" target="17" />
       <module name="reputacao-service" target="17" />
     </bytecodeTargetLevel>
   </component>
@@ -27,8 +27,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="autentication" options="-parameters" />
       <module name="cadastro-service" options="-parameters" />
-      <module name="consumidor-fila" options="-parameters" />
-      <module name="produtor-fila" options="-parameters" />
+      <module name="consumidor-fila-service" options="-parameters" />
+      <module name="produtor-fila-service" options="-parameters" />
       <module name="reputacao-service" options="-parameters" />
     </option>
   </component>

@@ -2,13 +2,12 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/autentication-service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/autentication-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cadastro-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cadastro-service/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/consumidor-fila/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/consumidor-fila/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/produtor-fila/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/produtor-fila/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumidor-fila-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumidor-fila-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/produtor-fila-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/produtor-fila-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/reputacao-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/reputacao-service/src/main/resources" charset="UTF-8" />
   </component>
