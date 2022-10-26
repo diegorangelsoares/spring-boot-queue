@@ -38,8 +38,8 @@ public class SwaggerConfig {
     private ApiInfo metaInfo() {
 
         ApiInfo apiInfo = new ApiInfo(
-                "API REST",
-                "API REST.",
+                "Cadastro Service",
+                "Serviço responsável por cadastrar e alterar dados de restautantes e pratos.",
                 "1.0",
                 "Terms of Service",
                 new Contact("Diego Rangel","",
