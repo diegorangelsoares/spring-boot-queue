@@ -18,4 +18,5 @@ Tecnologias utilizadas:
   Redis
   Postgres
   RabbitMQ
+  Eureka
   

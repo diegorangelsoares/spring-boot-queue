@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/../../Projeto E-commerce Microservice/e-commerce/autentication-service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../../Projeto E-commerce Microservice/e-commerce/registry-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/autentication-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/autentication-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cadastro-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cadastro-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumidor-fila-service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/consumidor-fila-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/produtor-fila-service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/produtor-fila-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/registry-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/registry-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/reputacao-service/src/main/java" charset="UTF-8" />

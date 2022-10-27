@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/autentication-service/autentication.iml" filepath="$PROJECT_DIR$/autentication-service/autentication.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../Projeto E-commerce Microservice/e-commerce/autentication-service/autentication (1) (br.com.diego).iml" filepath="$PROJECT_DIR$/../../Projeto E-commerce Microservice/e-commerce/autentication-service/autentication (1) (br.com.diego).iml" />
+      <module fileurl="file://$PROJECT_DIR$/autentication-service/autentication-service.iml" filepath="$PROJECT_DIR$/autentication-service/autentication-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/cadastro-service/cadastro-service.iml" filepath="$PROJECT_DIR$/cadastro-service/cadastro-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/consumidor-fila-service/consumidor-fila-service.iml" filepath="$PROJECT_DIR$/consumidor-fila-service/consumidor-fila-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/gateway-service/gateway-service.iml" filepath="$PROJECT_DIR$/gateway-service/gateway-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/librabbitmq/librabbitmq.iml" filepath="$PROJECT_DIR$/librabbitmq/librabbitmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/produtor-fila-service/produtor-fila-service.iml" filepath="$PROJECT_DIR$/produtor-fila-service/produtor-fila-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/registry-service/registry-service.iml" filepath="$PROJECT_DIR$/registry-service/registry-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../Projeto E-commerce Microservice/e-commerce/registry-service/registry-service (1).iml" filepath="$PROJECT_DIR$/../../Projeto E-commerce Microservice/e-commerce/registry-service/registry-service (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/reputacao-service/reputacao-service.iml" filepath="$PROJECT_DIR$/reputacao-service/reputacao-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring-boot-queue.iml" filepath="$PROJECT_DIR$/.idea/spring-boot-queue.iml" />
     </modules>
