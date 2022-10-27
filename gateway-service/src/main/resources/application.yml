@@ -1,0 +1,47 @@
+server:
+  port: 8765
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+spring:
+  application:
+    name: api-gateway
+  #  config:
+  #    import: "optional:configserver:"
+  sleuth:
+    sampler:
+      probability: 1.0
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      #          lower-case-service-id: true
+      routes:
+        - id: cadastro-service
+          uri: lb://cadastro-service
+          predicates:
+            - Path=/cadastro-service/**
+        - id: consumidor-fila-service
+          uri: lb://consumidor-fila-service
+          predicates:
+            - Path=/consumidor-fila-service/**
+        - id: produtor-fila-service
+          uri: lb://produtor-fila-service
+          predicates:
+            - Path=/produtor-fila-service/**
+        - id: reputacao-service
+          uri: lb://reputacao-service
+          predicates:
+            - Path=/reputacao-service/**
+        - id: autentication-service
+          uri: lb://autentication-service
+          predicates:
+            - Path=/autentication-service/**
+        - id: openapi
+          uri: lb://api-gateway
+          predicates:
+            - Path=/v3/api-docs/**
+          filters:
+            - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs

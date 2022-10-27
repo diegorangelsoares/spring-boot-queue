@@ -8,27 +8,39 @@
         <outputRelativeToContentRoot value="true" />
         <module name="reputacao-service" />
         <module name="librabbitmq" />
+        <module name="gateway-service" />
+        <module name="consumidor-fila-service" />
+        <module name="registry-service" />
+        <module name="registry-service (1)" />
         <module name="cadastro-service" />
         <module name="autentication" />
-        <module name="consumidor-fila-service" />
+        <module name="autentication (1) (br.com.diego)" />
         <module name="produtor-fila-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="autentication" target="11" />
+      <module name="autentication (1) (br.com.diego)" target="11" />
       <module name="cadastro-service" target="17" />
       <module name="consumidor-fila-service" target="17" />
+      <module name="gateway-service" target="17" />
       <module name="librabbitmq" target="17" />
       <module name="produtor-fila-service" target="17" />
+      <module name="registry-service" target="17" />
+      <module name="registry-service (1)" target="11" />
       <module name="reputacao-service" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="autentication" options="-parameters" />
+      <module name="autentication (1) (br.com.diego)" options="-parameters" />
       <module name="cadastro-service" options="-parameters" />
       <module name="consumidor-fila-service" options="-parameters" />
+      <module name="gateway-service" options="-parameters" />
       <module name="produtor-fila-service" options="-parameters" />
+      <module name="registry-service" options="-parameters" />
+      <module name="registry-service (1)" options="-parameters" />
       <module name="reputacao-service" options="-parameters" />
     </option>
   </component>

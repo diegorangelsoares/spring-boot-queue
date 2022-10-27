@@ -12,6 +12,9 @@
         <option value="$PROJECT_DIR$/autentication-service/pom.xml" />
         <option value="$PROJECT_DIR$/consumidor-fila-service/pom.xml" />
         <option value="$PROJECT_DIR$/produtor-fila-service/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Projeto E-commerce Microservice/e-commerce/registry-service/pom.xml" />
+        <option value="$PROJECT_DIR$/registry-service/pom.xml" />
       </list>
     </option>
   </component>
