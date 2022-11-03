@@ -16,14 +16,16 @@ public class JWTConfiguracao extends WebSecurityConfigurerAdapter {
     private final PasswordEncoder passwordEncoder;
 
     private static final String[] ENDPOINTS_LIBERADOS = {
-            "/tokens/**",
-            "/login/**",
+//            "/tokens/**",
+//            "/login/**",
             "/webjars/**",
             "/v1/api-docs/**",
             "/swagger-resources/**",
             "/swagger-ui.html",
-            "/actuator/**",
-            "/**"
+            "/swagger-ui/index.html"
+//            ,
+//            "/actuator/**",
+//            "/**"
     };
 
     public JWTConfiguracao(PasswordEncoder passwordEncoder) {
