@@ -11,6 +11,8 @@ import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -62,6 +64,10 @@ public class PratoController {
 
     @RequestMapping (value = "/", method = RequestMethod.GET)
     public ResponseEntity<?> getAll (@RequestParam long idRestaurante){
+        Optional<Restaurante> restaurante = restauranteService.buscaRestaurante(idRestaurante);
+        if (!restaurante.isPresent()){
+            return new ResponseEntity<>("Restaurante "+idRestaurante+" não localizado!", HttpStatus.NOT_FOUND);
+        }
         Optional<List<Prato>> pratos = pratoService.buscaTodosPratos(idRestaurante);
         if (!pratos.isPresent()){
             return new ResponseEntity<>(new ArrayList<Prato>(), HttpStatus.OK);
