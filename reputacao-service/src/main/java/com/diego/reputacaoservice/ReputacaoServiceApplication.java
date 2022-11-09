@@ -17,7 +17,6 @@ import java.net.UnknownHostException;
 
 @SpringBootApplication
 @EnableWebMvc
-//@EnableCaching
 public class ReputacaoServiceApplication {
 
 	public static void main(String[] args) throws UnknownHostException {

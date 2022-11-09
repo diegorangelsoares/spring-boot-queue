@@ -1,8 +1,8 @@
 package com.diego.reputacaoservice.consumer;
 
 import Contants.RabbitMQContantes;
-import dto.EstoqueDTO;
-import dto.PrecoDTO;
+import com.diego.reputacaoservice.services.AvaliacaoService;
+import dto.AvaliacaoDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,20 +14,14 @@ import java.io.Serializable;
 @Slf4j
 public class AvaliacaoConsumer implements Serializable {
 
-//    @Autowired
-//    ProdutoServiceImp estoqueService;
-//
-//    @RabbitListener (queues = RabbitMQContantes.FILA_ESTOQUE)
-//    private void consumidor(EstoqueDTO estoqueDTO){
-//        log.info("Resgatando mensagem de estoque do RabbitMQ: "+estoqueDTO.toString());
-//        estoqueService.atualizaEstoque(estoqueDTO);
-//    }
-//
-//    @RabbitListener (queues = RabbitMQContantes.FILA_PRECO)
-//    private void consumidor(PrecoDTO precoDTO){
-//        log.info("Resgatando mensagem de preco do RabbitMQ: "+precoDTO.toString());
-//        estoqueService.atualizaPreco(precoDTO)
-//        ;
-//    }
+    @Autowired
+    AvaliacaoService avaliacaoService;
+
+    @RabbitListener (queues = RabbitMQContantes.FILA_AVALIACAO)
+    private void consumidor(AvaliacaoDTO avaliacaoDTO){
+        log.info("Resgatando mensagem de avaliacao do RabbitMQ: "+avaliacaoDTO.toString());
+        avaliacaoService.salva(avaliacaoDTO)
+        ;
+    }
 
 }

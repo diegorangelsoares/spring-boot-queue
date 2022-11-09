@@ -1,4 +1,4 @@
-package com.diego.cadastro.security;
+package com.diego.produtorfila.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -22,10 +22,10 @@ public class JWTConfiguracao extends WebSecurityConfigurerAdapter {
             "/v1/api-docs/**",
             "/swagger-resources/**",
             "/swagger-ui.html",
-            "/swagger-ui/index.html",
+            "/swagger-ui/index.html"
 //            ,
 //            "/actuator/**",
-            "/**"
+//            "/**"
     };
 
     public JWTConfiguracao(PasswordEncoder passwordEncoder) {

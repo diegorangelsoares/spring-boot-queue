@@ -6,6 +6,7 @@ import com.diego.reputacaoservice.model.Reputacao;
 import com.diego.reputacaoservice.repositorys.AvaliacaoRepository;
 import com.diego.reputacaoservice.repositorys.ReputacaoRepository;
 import com.diego.reputacaoservice.services.AvaliacaoService;
+import dto.AvaliacaoDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +24,7 @@ public class AvaliacaoServiceImp implements AvaliacaoService {
     ReputacaoRepository reputacaoRepository;
 
     @Override
-    public Avaliacao salva(AvaliacaoRequest avaliacao) {
+    public Avaliacao salva(AvaliacaoDTO avaliacao) {
         Avaliacao avaliacao1 = new Avaliacao();
         avaliacao1.setDescricao(avaliacao.getDescricao());
         avaliacao1.setNota(avaliacao.getNota());

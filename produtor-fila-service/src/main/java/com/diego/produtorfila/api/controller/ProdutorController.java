@@ -2,6 +2,7 @@ package com.diego.produtorfila.api.controller;
 
 import Contants.RabbitMQContantes;
 import com.diego.produtorfila.service.RabbitMqService;
+import dto.AvaliacaoDTO;
 import dto.EstoqueDTO;
 import dto.PrecoDTO;
 import lombok.extern.slf4j.Slf4j;
@@ -31,6 +32,13 @@ public class ProdutorController {
         log.info("Enviando alteracao de preco: "+precoDTO.toString());
         this.rabbitMqService.enviaMensagem(RabbitMQContantes.FILA_PRECO, precoDTO);
         return new ResponseEntity<>("Alteração de preço enviada...", HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/avaliacaoRestauranteAsync", method = RequestMethod.POST)
+    public ResponseEntity<?> enviaAvaliacaoRestaurante (@RequestBody AvaliacaoDTO avaliacaoDTO){
+        log.info("Enviando avaliacao de restaurante: "+avaliacaoDTO.toString());
+        this.rabbitMqService.enviaMensagem(RabbitMQContantes.FILA_AVALIACAO, avaliacaoDTO);
+        return new ResponseEntity<>("Avaliacao de restaurante enviada...", HttpStatus.OK);
     }
 
 }

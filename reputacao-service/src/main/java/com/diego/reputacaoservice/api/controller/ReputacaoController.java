@@ -3,6 +3,7 @@ package com.diego.reputacaoservice.api.controller;
 import com.diego.reputacaoservice.api.request.AvaliacaoRequest;
 import com.diego.reputacaoservice.services.AvaliacaoService;
 import com.diego.reputacaoservice.services.ReputacaoService;
+import dto.AvaliacaoDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,8 +34,8 @@ public class ReputacaoController {
         return new ResponseEntity<>(reputacaoService.listaPorRestaurante(idRestaurante), HttpStatus.OK);
     }
 
-    @RequestMapping (value = "/avaliacao", method = RequestMethod.POST)
-    public ResponseEntity<?> saveAvaliacao (@RequestBody AvaliacaoRequest avaliacaoRequest){
+    @RequestMapping (value = "/avaliacaoSync", method = RequestMethod.POST)
+    public ResponseEntity<?> saveAvaliacaoSync (@RequestBody AvaliacaoDTO avaliacaoRequest){
         return new ResponseEntity<>(avaliacaoService.salva(avaliacaoRequest), HttpStatus.OK);
     }
 

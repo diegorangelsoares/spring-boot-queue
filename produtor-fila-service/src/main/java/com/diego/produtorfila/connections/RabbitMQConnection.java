@@ -34,22 +34,24 @@ public class RabbitMQConnection {
     private void adiciona(){
         Queue filaEstoque = this.fila(RabbitMQContantes.FILA_ESTOQUE);
         Queue filaPreco = this.fila(RabbitMQContantes.FILA_PRECO);
+        Queue filaAvaliacao = this.fila(RabbitMQContantes.FILA_AVALIACAO);
 
         DirectExchange troca = this.trocaDireta();
 
         Binding ligacaoEstoque = this.relacionamento(filaEstoque, troca);
         Binding ligacaoPreco = this.relacionamento(filaPreco, troca);
+        Binding ligacaoAvaliacao = this.relacionamento(filaAvaliacao, troca);
 
         //Criando as filas no RabitMQ
         this.amqpAdmin.declareQueue(filaEstoque);
         this.amqpAdmin.declareQueue(filaPreco);
+        this.amqpAdmin.declareQueue(filaAvaliacao);
 
         this.amqpAdmin.declareExchange(troca);
 
         this.amqpAdmin.declareBinding(ligacaoEstoque);
         this.amqpAdmin.declareBinding(ligacaoPreco);
-
-
+        this.amqpAdmin.declareBinding(ligacaoAvaliacao);
 
     }
 

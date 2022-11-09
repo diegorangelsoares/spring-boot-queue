@@ -8,4 +8,6 @@ public class RabbitMQContantes {
 
     public static final String FILA_PRECO = "PRECO";
 
+    public static final String FILA_AVALIACAO = "AVALIACAO";
+
 }
