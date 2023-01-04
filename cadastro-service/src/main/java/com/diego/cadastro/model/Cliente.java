@@ -1,12 +1,14 @@
 package com.diego.cadastro.model;
 
 import lombok.Data;
+import org.springframework.data.redis.core.RedisHash;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Data
-@Entity (name = "t_cliente")
-public class Cliente {
+@Entity (name = "cliente")
+public class Cliente implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
