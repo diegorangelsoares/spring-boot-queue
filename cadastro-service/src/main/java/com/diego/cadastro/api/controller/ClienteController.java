@@ -24,8 +24,8 @@ public class ClienteController {
     @Autowired
     ClienteService clienteService;
 
-//    @Cacheable(cacheNames = "clientes", key = "#idCliente")    @RequestMapping (value = "/{idCliente}", method = RequestMethod.GET)
-    @RequestMapping (value = "/{idCliente}", method = RequestMethod.GET)
+
+    @RequestMapping(value = "/{idCliente}", method = RequestMethod.GET)
     public ResponseEntity<?> getClientes(@PathVariable long idCliente){
         log.info("Buscando cliente de id: "+idCliente);
         return new ResponseEntity<>(clienteService.getClienteById(idCliente), HttpStatus.OK);
