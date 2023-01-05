@@ -24,14 +24,14 @@ public class ClienteController {
     @Autowired
     ClienteService clienteService;
 
-//    @Cacheable(cacheNames = "clientes", key = "#idCliente")
+//    @Cacheable(cacheNames = "clientes", key = "#idCliente")    @RequestMapping (value = "/{idCliente}", method = RequestMethod.GET)
     @RequestMapping (value = "/{idCliente}", method = RequestMethod.GET)
     public ResponseEntity<?> getClientes(@PathVariable long idCliente){
         log.info("Buscando cliente de id: "+idCliente);
         return new ResponseEntity<>(clienteService.getClienteById(idCliente), HttpStatus.OK);
     }
 
-    @RequestMapping (value = "/", method = RequestMethod.GET)
+    @RequestMapping (value = "", method = RequestMethod.GET)
     public ResponseEntity<?> getClientesAll(
             @RequestParam(value = "page", required = false, defaultValue = "0") int page,
             @RequestParam(value = "size", required = false, defaultValue = "10") int size){
