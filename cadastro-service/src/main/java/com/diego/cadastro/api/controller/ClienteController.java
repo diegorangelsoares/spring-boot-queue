@@ -24,9 +24,8 @@ public class ClienteController {
     @Autowired
     ClienteService clienteService;
 
-
     @RequestMapping(value = "/{idCliente}", method = RequestMethod.GET)
-    public ResponseEntity<?> getClientes(@PathVariable long idCliente){
+    public ResponseEntity<?> getById(@PathVariable long idCliente){
         log.info("Buscando cliente de id: "+idCliente);
         return new ResponseEntity<>(clienteService.getClienteById(idCliente), HttpStatus.OK);
     }
@@ -39,7 +38,6 @@ public class ClienteController {
         return new ResponseEntity<>(clienteService.getAllPage(page, size), HttpStatus.OK);
     }
 
-//    @CacheEvict(cacheNames = "clientes", key="#idCliente")
     @RequestMapping(value = "", method = RequestMethod.POST)
     public ResponseEntity<?> save (@RequestBody Cliente cliente){
         log.info("Salvando cliente: \n" + cliente.toString());
