@@ -43,6 +43,6 @@ public class ClienteController {
     @RequestMapping(value = "", method = RequestMethod.POST)
     public ResponseEntity<?> save (@RequestBody Cliente cliente){
         log.info("Salvando cliente: \n" + cliente.toString());
-        return new ResponseEntity<>(clienteService.save(cliente), HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(clienteService.save(cliente), HttpStatus.CREATED);
     }
 }
