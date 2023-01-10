@@ -4,8 +4,9 @@ Projeto em spring boot produzindo e consumindo filas no RabbitMQ
 
 Projeto que simula as rotinas de um restaurante (Pedidos) por aplicativo/web disponibilizando as APIs Rest para consumo.
 
-- Crud de Cadastros
-- Restaurante
+Crud de Cadastros
+- Restaurantes
+- Clientes
 - Pratos
 - Pedidos
 - Avaliacoes / Reputacao
@@ -13,10 +14,11 @@ Projeto que simula as rotinas de um restaurante (Pedidos) por aplicativo/web dis
 - Controle de Reputação do Restaurante
 
 Tecnologias utilizadas:
-  Spring boot
-  Spring Security
-  Redis
-  Postgres
-  RabbitMQ
-  Eureka
+
+- Spring boot
+- Spring Security
+- Redis
+- Postgres
+- RabbitMQ
+- Eureka
   
