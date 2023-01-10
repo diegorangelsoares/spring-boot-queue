@@ -1,23 +1,35 @@
 server:
   port: 8085
+  error:
+    include-message: always
+    include-stacktrace: never
+    servlet:
+      encoding:
+        enabled: true
+        charset: UTF-8
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
 
+cadastroservice:
+  app-name: ${spring.application.name}
+  api-info:
+    titulo: Cadastro Service API
+    descricao: Api para cadastros
+    versao: '@project.version@'
+    pacote: com.diego.cadastro.api
+
 spring:
   application:
-    name: cadastro-service
-#  rabbitmq:
-#    host: localhost
-#    port: 5672
-#    username: admin
-#    password: 123456
-#  redis:
-#    url: localhost
-#    port: 6379
-
+    name: ${APPLICATION_NAME:cadastro-service}
+  cache:
+    type: redis
+  redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_POT:6379}
+    timeout: ${REDIS_TIMEOUT:9000}
   datasource:
     url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5433}/${DB_NAME:cadastro}?currentSchema=${DB_SCHEMA:public}
     username: postgres
